@@ -11,6 +11,7 @@ import { IframeComponent } from './components/iframe/iframe.component';
 import { MaterialModule } from '../material/material.module';
 import { PicDayComponent } from './pages/pic-day/pic-day.component';
 import { BigImageComponent } from './components/big-image/big-image.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +30,8 @@ import { BigImageComponent } from './components/big-image/big-image.component';
     CommonModule,
     ApodRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class ApodModule { }

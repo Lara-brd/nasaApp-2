@@ -47,6 +47,14 @@ setPictureRandom(){
       this.picturesRandom = data });
 }
 
+setPictureByDate(fecha:string){
+  this.http.get<Picture[]>(`${this.apiUrl}${this.apiKey}&start_date=${fecha}&end_date=${fecha}`)
+    .subscribe(info=> {
+      this.picture = info[0];
+    })
+
+}
+
 
 
 
