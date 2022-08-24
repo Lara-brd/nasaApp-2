@@ -13,6 +13,9 @@ export class ApodService {
 
   picture!:Picture;
   videoUrl:string ='';
+  picturesRandom:Picture[]=[];
+
+
 
   /////////////////////////////////////////////
 
@@ -34,5 +37,19 @@ export class ApodService {
       }
     })
 }
+
+
+//random
+setPictureRandom(){
+  this.http.get<Picture[]>(`${this.apiUrl}${this.apiKey}&count=10`)
+    .subscribe(data => {
+      // TODO error
+      this.picturesRandom = data });
+}
+
+
+
+
+
 
 }

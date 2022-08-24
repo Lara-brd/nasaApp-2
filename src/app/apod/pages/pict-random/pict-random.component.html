@@ -1,1 +1,49 @@
-<p>pict-random works!</p>
+
+
+<div class="disp-flex just-center align-items-center cont" *ngIf="pictures.length === 0; else picturesOK">
+  <mat-spinner></mat-spinner>
+</div>
+
+
+<ng-template #picturesOK>
+  
+
+<div class="intro disp-flex">
+  <div class="px-20">
+    <h2 class="title">Pictures of the day</h2>
+    <p class="">Every day one Picture, do yo like pictures of day ? Press reset button for more</p>
+  </div>
+
+  <div class="px-20">
+    <button
+      mat-fab color="warn" 
+      aria-label="Example icon button with a home icon"
+      (click)="resetPictures()">
+      <mat-icon mat-list-icon><span class="material-symbols-outlined restard">
+          restart_alt
+        </span></mat-icon>
+    </button>
+  </div>
+</div>
+<mat-divider class="p-10"></mat-divider>
+
+
+<!-- images--------------------------- -->
+
+  <div class="container">
+    <div class="grid">
+      <div class="masonry-entry shadow rounded"  
+            *ngFor="let picture of pictures"
+            (click)="getPicture(picture)">
+        <img
+          [src]="picture.url"
+          onerror="this.src='../../../../assets/images/placeholder.jpg'"
+        />
+
+        <h4>{{ picture.title }}</h4>
+      </div>
+    </div>
+  </div>
+
+  
+</ng-template> 
