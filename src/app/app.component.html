@@ -1,16 +1,75 @@
-<h1>aapp nasa</h1>
 
-<router-outlet></router-outlet>
-<a routerLink="/apod">apod</a>
-<br>
-<a routerLink="/apod/day">day</a>
-<br>
-<a routerLink="/apod/random">random</a>
-<br>
-<a routerLink="/apod/selected">selected</a>
-<br>
-<a routerLink="/apod/date">date</a>
-<br>
-<a routerLink="/404">404</a>
-<br>
-<a routerLink="/home">home</a>
+<mat-sidenav-container fullscreen [hasBackdrop]="false">
+
+
+  <mat-sidenav #sidenav mode="push"> 
+
+    <!-- sidebar -->
+    <mat-toolbar color="primary">
+      <span>Menu</span>
+      <span class="spacer"></span>
+      <button mat-icon-button 
+              class="example-icon" 
+              aria-label="Example icon-button with menu icon"
+              (click)="sidenav.toggle()">
+        <mat-icon>
+          arrow_back_ios
+          </mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a  mat-list-item
+          (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>label</mat-icon>
+        <span>Listado de BLALBA</span>
+      </a>
+
+      <!-- prueba -->
+      <a routerLink="/apod/day">day</a>
+      <br>
+      <a routerLink="/404">404</a>
+      <br>
+      <a routerLink="/apod/random">random</a>
+      <br>
+      <a routerLink="/apod/date">date</a>
+      
+      
+    </mat-nav-list>
+  </mat-sidenav> 
+
+
+  
+  <!-- content -->
+  <mat-toolbar>
+    <button mat-icon-button 
+            class="example-icon" 
+            aria-label="Example icon-button with menu icon"
+            (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="spacer"></span>
+    <!-- dark mode -->
+    <button mat-icon-button 
+            class="example-icon favorite-icon" 
+            aria-label="Example icon-button with heart icon"
+            (click)="onSetTheme()">
+      <mat-icon>dark_mode</mat-icon>
+    </button> 
+<!-- 
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>
+
+
+

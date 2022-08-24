@@ -1,4 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Define a light theme
+$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-accent: mat.define-palette(mat.$pink-palette);
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+  )
+));
+
+
+// Define a dark theme
+$dark-primary: mat.define-palette(mat.$pink-palette);
+$dark-accent: mat.define-palette(mat.$blue-grey-palette);
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+  )
+));
+
+@include mat.all-component-themes($light-theme);
+
+.my-lighttheme {
+  @include mat.all-component-themes($light-theme);
+  //como es una clase podemos hacer pequeñas especificaciones
+  background: #fff;
+  color:#222;
+}
+
+.my-darktheme {
+  @include mat.all-component-themes($dark-theme);
+  background: #222;
+  color:#fff;
+}
+
+
+///////////////////////////////////////////// my themes
+
+
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+
+
+
+
+.vh-100{
+  height: 100vh;
+}
+
+.my-wrapper{
+  width:90%;
+  max-width:1500px;
+}
+
+.disp-flex{
+  display: flex;
+}
+
+
+.dir-column{
+  flex-direction: column;
+}
+
+.just-center{
+  justify-content: center;
+}
+
+.just-space-bet {
+  justify-content: space-between;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+
+
+.spacer{
+  flex:1 1 auto;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+// /////////////////////////////tipography
+
+.title{
+
+}
+
+.text-center{
+  text-align: center;
+}
+
+.p-5 {
+  padding:50px;
+}
+
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
