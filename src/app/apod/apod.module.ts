@@ -4,8 +4,13 @@ import { HomeApodComponent } from './pages/home-apod/home-apod.component';
 import { PictRandomComponent } from './pages/pict-random/pict-random.component';
 import { PictSelectedComponent } from './pages/pict-selected/pict-selected.component';
 import { PicDateComponent } from './pages/pic-date/pic-date.component';
-import { PicDayComponent } from './pages/pic-day/pic-day.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { ApodRoutingModule } from './apod-routing.module';
+import { IframeComponent } from './components/iframe/iframe.component';
+import { MaterialModule } from '../material/material.module';
+import { PicDayComponent } from './pages/pic-day/pic-day.component';
+import { BigImageComponent } from './components/big-image/big-image.component';
 
 
 
@@ -15,12 +20,16 @@ import { ApodRoutingModule } from './apod-routing.module';
     PictRandomComponent,
     PictSelectedComponent,
     PicDateComponent,
+    IframeComponent,
     PicDayComponent,
+    BigImageComponent,
 
   ],
   imports: [
     CommonModule,
-    ApodRoutingModule
+    ApodRoutingModule,
+    MaterialModule,
+    HttpClientModule
   ]
 })
 export class ApodModule { }

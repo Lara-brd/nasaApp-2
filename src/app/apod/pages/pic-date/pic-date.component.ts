@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApodService } from '../../services/apod.service';
 
 @Component({
   selector: 'app-pic-date',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PicDateComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _apodService:ApodService) { }
 
   ngOnInit(): void {
   }
