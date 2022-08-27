@@ -1,7 +1,6 @@
 
 <mat-sidenav-container fullscreen [hasBackdrop]="false">
 
-
   <mat-sidenav #sidenav mode="push"> 
 
     <!-- sidebar -->
@@ -38,7 +37,6 @@
     </mat-nav-list>
   </mat-sidenav> 
 
-
   
   <!-- content -->
   <mat-toolbar>
@@ -54,8 +52,15 @@
     <button mat-icon-button 
             class="example-icon favorite-icon" 
             aria-label="Example icon-button with heart icon"
-            (click)="onSetTheme()">
+            (click)="onSetTheme('my-darktheme')">
       <mat-icon>dark_mode</mat-icon>
+    </button> 
+
+    <button mat-icon-button 
+            class="example-icon favorite-icon" 
+            aria-label="Example icon-button with heart icon"
+            (click)="onSetTheme('my-lighttheme')">
+      <mat-icon>light_mode</mat-icon>
     </button> 
 <!-- 
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">

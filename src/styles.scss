@@ -30,14 +30,12 @@ $dark-theme: mat.define-dark-theme((
 .my-lighttheme {
   @include mat.all-component-themes($light-theme);
   //como es una clase podemos hacer pequeñas especificaciones
-  background: #fff;
-  color:#222;
+
 }
 
 .my-darktheme {
   @include mat.all-component-themes($dark-theme);
-  background: #222;
-  color:#fff;
+
 }
 
 

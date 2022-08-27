@@ -9,6 +9,7 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HomeComponent } from './shared/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    OverlayModule
     
   ],
   providers: [],

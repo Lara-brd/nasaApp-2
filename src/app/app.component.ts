@@ -1,5 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
 import { OverlayContainer} from '@angular/cdk/overlay';
+import { OverlayModule} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -13,18 +14,25 @@ export class AppComponent {
 
   @HostBinding('class') componentCssClass:any;
 
-  constructor( public overlayCont:OverlayContainer){}
+  constructor( public overlayContainer:OverlayContainer){}
 
   
-  onSetTheme(){
-    if(this.mode === 'my-lighttheme'){
-      this.mode = 'my-darktheme'
+  onSetTheme(e:string){
+
+    this.overlayContainer.getContainerElement().classList.remove(e);
+
+  
+    if(this.overlayContainer.getContainerElement().classList.contains('my-lighttheme')){
+      this.overlayContainer.getContainerElement().classList.remove('my-lighttheme'); 
+      this.overlayContainer.getContainerElement().classList.add('my-darktheme');
     }else{
-      this.mode = 'my-lighttheme'
+      this.overlayContainer.getContainerElement().classList.remove('my-darktheme');
+      this.overlayContainer.getContainerElement().classList.add('my-lighttheme');
     }
 
-    this.overlayCont.getContainerElement().classList.add(this.mode);
-    this.componentCssClass = this.mode;
+  
+    this.componentCssClass = e;
+
   }
 
 }

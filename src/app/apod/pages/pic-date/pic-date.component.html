@@ -1,7 +1,7 @@
 
 
 
-<div class="wrapp center disp-flex just-space-bet" style="background: inherit;">
+<div class="wrapp center disp-flex just-space-bet">
   <div class="text-day">
     <h2>Pictures by date</h2>
     <p>Sinze ddddd NASA choose a picture blabla dont   , amet consectetur adipisicing elit. Quaerat ad doloribus doloremque ex, non aliquam perspiciatis, id, nesciunt recusandae commodi expedita voluptates magnam.</p>
@@ -22,7 +22,7 @@
                 (input)="prueba()">
         <mat-error *ngIf="!fecha">Use datepicker to choose a date please</mat-error>
         <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker-toggle style="background: inherit;" matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       
       </mat-form-field>
