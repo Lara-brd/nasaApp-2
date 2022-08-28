@@ -1,6 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 import { OverlayContainer} from '@angular/cdk/overlay';
 import { ThemePalette } from '@angular/material/core';
+import { GeneralService } from 'src/services/general.service';
 
 interface linkSidebar {
   nameLink:String;
@@ -43,7 +44,8 @@ export class AppComponent {
   /////////////////////////////////////////////////////////
 
 
-  constructor( public overlayContainer:OverlayContainer){}
+  constructor(  public overlayContainer:OverlayContainer,
+                private _generalService:GeneralService){}
 
 
   /////////////////////////////////////////////////////////
@@ -51,18 +53,18 @@ export class AppComponent {
   
   onSetTheme(e:string){
 
-
-
     if(this.overlayContainer.getContainerElement().classList.contains('my-lighttheme')){
       this.overlayContainer.getContainerElement().classList.remove('my-lighttheme'); 
       this.overlayContainer.getContainerElement().classList.add(e);
     }else{
       this.overlayContainer.getContainerElement().classList.remove('my-darktheme');
       this.overlayContainer.getContainerElement().classList.add(e);
-
     }
-
     this.componentCssClass = e;
+
+    this._generalService.changeTheme(e);
+    
+
   }
 
 }

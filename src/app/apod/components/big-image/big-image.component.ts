@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { GeneralService } from 'src/services/general.service';
 import { ApodService } from '../../services/apod.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { ApodService } from '../../services/apod.service';
   templateUrl: './big-image.component.html',
   styleUrls: ['./big-image.component.scss']
 })
-export class BigImageComponent implements OnInit {
+export class BigImageComponent {
 
   @Input() buttonText:string ='';
   @Input() link:string ='';
@@ -16,11 +16,20 @@ export class BigImageComponent implements OnInit {
     return this._apodService.picture;
   }
 
+  get lightTheme(){
+    return this._generalService.lightTheme;
+  }
+
+  ///////////////////////////////////////////////////
 
   constructor(  private _apodService:ApodService,
-                private _router:Router) { }
+                private _generalService:GeneralService) { }
 
-  ngOnInit(): void {
+/////////////////////////////////////////////////////
+
+
+  getBg(){
+    return this._generalService.setBg()
   }
 
 }
