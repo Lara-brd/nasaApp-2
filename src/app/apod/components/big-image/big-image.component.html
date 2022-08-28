@@ -14,8 +14,9 @@
 
     <div *ngIf="picture.media_type == 'video'; else image">
       <!-- video -->
-      <P>tODO crear video</P>
-      <!-- <app-video></app-video> -->
+
+      <app-iframe></app-iframe>
+
     </div>
 
 
@@ -29,6 +30,7 @@
     </ng-template>
 
     <div class="content">
+      
       <h2 class="subtitle">{{picture.title}}</h2>
       <p class="text">{{picture.explanation}}</p>
       <p class="opacity-5 text-small date">{{ picture.copyright}} {{ picture.date }}</p>

@@ -1,0 +1,17 @@
+
+// el contenderos con el padding-top crea el tamaño del video
+.video{
+  height:0px;
+  width:100%;
+  padding-top:56.25%; /* Relación: 16/9 = 56.25% */
+  position:relative;
+  }
+
+// el iframe se adapta al tamaño del contenedor
+iframe{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0px;
+  left:0px;
+  }
