@@ -20,5 +20,9 @@ export class GeneralService {
     return  this.lightTheme ? 'bg-orange': 'bg-blue';
   }
 
+  setBorder(){
+    return this.lightTheme ? 'border-light-primary': 'border-dark-primary';
+  }
+
 
 }

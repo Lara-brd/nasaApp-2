@@ -67,4 +67,8 @@ export class AppComponent {
 
   }
 
+  getBg(){
+    return this._generalService.setBg()
+  }
+
 }

@@ -1,4 +1,77 @@
-<p>home works!</p>
+
+<header>
+
+  <div class="container disp-flex">
+
+    <div class="header-text">
+      <h2>
+        Hubble's Jupiter and the Shrinking Great Red Spot
+      </h2>
+      <p>
+        What will become of Jupiter's Great Red Spot?  Gas giant Jupiter is the solar system's largest world with about 320 times the mass of planet Earth. Jupiter is home to one of the largest and longest lasting storm systems known, the Great Red Spot (GRS), visible to the left. The GRS is so large it could swallow Earth, although it has been shrinking . . . 
+      </p>
+
+      <button mat-button color="primary">MORE ABOUT JUPITER</button>
+
+    </div>
+    <div class="header-image"></div>
+  </div>
+
+  
+</header>
+
+
+
+
+
+
+
+
+<section>
+
+  <div class="wrapp-content2">
+
+    <div class="content2 center">
+      <h2>
+        Discovering the cosmos
+      </h2>
+      <p>
+        Here you can find amazing images like the one you can see above toguether width its explanation. All this information is provided by NASA apis. 
+      </p>
+  
+      <p>
+        Keep whatching these pictures and videos to understand the misteris of the universe, even if you don't have any knowlege about astronomy or the universe you can learn every day reading this interesting information.
+      </p>
+
+    </div>
+  </div>
+
+
+
+    <div class="cards container-max center just-space-bet">
+  
+      <mat-card class="text-card" [class]="getBorder()" *ngFor="let card of cardsInfo">
+        <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
+        <mat-card-title>{{card.title}}</mat-card-title>
+        <mat-card-content>
+          <p>{{ card.intro}}</p>
+          <p>{{ card.longText }}</p>
+        </mat-card-content>
+        <mat-divider inset></mat-divider>
+        <mat-card-actions>
+          <button mat-button>{{card.btnSend | uppercase}}</button>
+        </mat-card-actions>
+        <mat-card-footer>
+          <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+        </mat-card-footer>
+      </mat-card>
+  
+    </div>
+
+
+
+</section>
+
 
 
 

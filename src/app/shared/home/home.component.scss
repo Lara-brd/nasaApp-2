@@ -1,0 +1,142 @@
+
+header{
+  height: 100%;
+  background-color: black;
+
+    .header-text,
+    .header-image{
+        width: 50%;
+    }
+    .header-text{
+      padding-left: 8%;
+      padding-top:12%;
+      max-width: 700px;
+      margin-left: auto;
+      p{
+        margin-top:50px;
+        color:white;
+        padding-right: 50px;
+      }
+      button{
+        margin-top: 20px;
+      }
+    }
+
+    
+    .header-image{
+      background-image: url('https://apod.nasa.gov/apod/image/2201/JupiterOpal_HubbleMasztalerz_1880.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+}
+
+
+section{
+  .wrapp-content2{
+    
+background: rgb(0,0,0);
+
+
+    .content2{
+      text-align: center;
+      max-width: 1200px;
+      padding-top:150px;
+      padding-bottom:200px;
+
+      p{
+        color:white
+      }
+    }
+
+  }
+
+
+  .cards{
+    padding-top:100px;
+    padding-bottom:100px;
+  }
+
+
+}
+
+
+
+
+
+
+h2{
+  font-family: 'Electrolize', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  color:white;
+}
+
+
+
+
+
+// header{
+//   height: 100%;
+//   background-color: black;
+
+//   .header-text,
+//   .header-image{
+//     width: 50%;
+//   }
+
+//   .header-text{
+//     padding-left: 8%;
+//     padding-top:10%;
+//     max-width: 700px;
+//     margin-left: auto;
+//     h2{
+//       font-family: 'Electrolize', sans-serif;
+//       font-size: 3rem;
+//       line-height: 1.5;
+//       color:white;
+//     }
+//     p{
+//       margin-top:50px;
+//       color:white;
+//       padding-right: 50px;
+//     }
+//     button{
+//       margin-top: 20px;
+//     }
+//   }
+
+
+//   .header-image{
+//     background-image: url('https://apod.nasa.gov/apod/image/2201/JupiterOpal_HubbleMasztalerz_1880.jpg');
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     height: 100vh;
+//   }
+  
+// }
+
+
+//   .wrapp-content2{
+//     background-color: pink;
+//     padding-top:100px;
+//     padding-bottom: 200px;
+
+
+
+//     .content2{
+//       text-align: center;
+//       max-width: 1200px;
+  
+//       h2{
+//         color:white;
+//         font-family: 'Electrolize', sans-serif;
+//         font-size: 3rem;
+//         line-height: 1.5;
+//       }
+//     }
+//   }
+
+  
+
+
