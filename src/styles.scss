@@ -6,7 +6,7 @@
 
 // Define a light theme
 $light-primary: mat.define-palette(mat.$orange-palette, 200);
-$light-accent: mat.define-palette(mat.$red-palette,300);
+$light-accent: mat.define-palette(mat.$pink-palette, 900);
 $light-warn: mat.define-palette(mat.$red-palette,700);
 
 $light-theme: mat.define-light-theme((
@@ -41,34 +41,47 @@ $light-theme: mat.define-light-theme((
 }
 
 //light
-$orange-200:#FFCC80;
-$red-300:#E57373;
-$red-700:#D32F2F;
+$light-primary:#FFCC80;
+$light-accent:#880E4F;
+$light-warn:#D32F2F;
 
 //dark
-$light-blue-200:#0288D1;
-$cyan-300:#4DD0E1;
+$primary-dark:#0288D1;
+$dark-accent:#4DD0E1;
 
 
 .bg-orange{
-  background-color: $orange-200;
+  background-color: $light-primary;
 }
 .bg-blue{
   background-color: //dark
-  $light-blue-200;
+  $primary-dark;
+}
+.bg-lightprimary-transp{
+  background-color: $light-primary;
+  opacity: .2;
 }
 
+.bg-darkprimary-transp{
+  background-color: //dark
+  $primary-dark;
+  opacity: .2;
+}
+
+
+
 .border-light-primary{
-  border:1px solid  $orange-200;
+  border:1px solid  $light-primary;
 }
 
 .border-dark-primary{
-  border:1px solid $light-blue-200;
+  border:1px solid $primary-dark;
 }
 
 
 
 // /////////////////////////////////////typography
+
 
 $my-custom-level: mat.define-typography-level(
   $font-family: Rubik,
@@ -95,16 +108,11 @@ $body-1:  mat.define-typography-level(1rem, 1.5, 400),
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "Noto Sans JP", "Helvetica Neue", sans-serif; }
+body { margin: 0; }
 
 .spacer {
   flex: 1 1 auto;
 }
-
-
-
-
-
 
 .vh-100{
   height: 100vh;
@@ -153,8 +161,8 @@ body { margin: 0; font-family: "Noto Sans JP", "Helvetica Neue", sans-serif; }
 
 // /////////////////////////////tipography
 
-.title{
-
+.title-m{
+  font-family: 'Electrolize', sans-serif;
 }
 
 .text-center{
@@ -184,6 +192,7 @@ body { margin: 0; font-family: "Noto Sans JP", "Helvetica Neue", sans-serif; }
 .text-card{
   margin-bottom: 50px;
 }
+
 
 @media only screen and (min-width: 872px) {
   .container-max{

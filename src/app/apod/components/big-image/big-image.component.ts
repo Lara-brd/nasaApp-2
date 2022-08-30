@@ -28,8 +28,4 @@ export class BigImageComponent {
 /////////////////////////////////////////////////////
 
 
-  getBg(){
-    return this._generalService.setBg()
-  }
-
 }

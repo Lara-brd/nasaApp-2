@@ -24,5 +24,9 @@ export class GeneralService {
     return this.lightTheme ? 'border-light-primary': 'border-dark-primary';
   }
 
+  setBgTransparent(){
+    return this.lightTheme ? 'bg-lightprimary-transp': 'bg-darkprimary-trans';
+  }
+
 
 }

@@ -8,8 +8,9 @@
 
 <ng-template #pictureOk>
 
-  <div  class="card disp-flex just-center dir-column"
+  <div  class="card disp-flex just-center dir-column "
         [class]="(picture.media_type == 'video')? 'max-w-960': 'max-w-700'">
+    <!--  -->
     
 
     <div *ngIf="picture.media_type == 'video'; else image">
@@ -31,7 +32,7 @@
 
     <div class="content">
       
-      <h2 [class]="getBg()" class="subtitle mat-headline">{{picture.title}}</h2>
+      <h2>{{picture.title}}</h2>
       <p class="text mat-body-1">{{picture.explanation}}</p>
       <p class="opacity-5 text-small date">{{ picture.copyright}} {{ picture.date }}</p>
     </div>

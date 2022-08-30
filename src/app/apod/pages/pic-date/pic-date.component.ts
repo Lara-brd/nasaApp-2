@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeneralService } from 'src/services/general.service';
 import { ApodService } from '../../services/apod.service';
 
 @Component({
@@ -6,13 +7,22 @@ import { ApodService } from '../../services/apod.service';
   templateUrl: './pic-date.component.html',
   styles: [`
     .wrapp{
+      padding:50px;
       max-width:1200px;
     }
     .text-day{
-      padding-top:20px;
       max-width:60%; 
     }
-
+    .search{
+      margin-top:10px;
+      height:90px;
+  
+    }
+    .submit{
+      margin-left:20px;
+      padding-left:20px;
+      padding-right:20px;
+    }
   `]
 })
 export class PicDateComponent {
@@ -28,7 +38,8 @@ export class PicDateComponent {
 
   //////////////////////////////////////////////////
 
-  constructor( private _apodService:ApodService) { }
+  constructor(  private _apodService:ApodService,
+                private _generalService:GeneralService) { }
 
   ////////////////////////////////////////////////////
 
@@ -37,17 +48,16 @@ export class PicDateComponent {
 
 
   getData(){
+
     this.fechaSended = true;
     const data = this.formatDate();
     this._apodService.setPictureByDate(data); 
-    console.log(this.picture)
+    if(this.fecha == undefined){
+      console.log(undefined)
+    }
+    console.log(this.fecha);
 
   }
-
-  prueba(){
-    console.log(this.fecha)
-  }
-
 
   formatDate(){
     return [
@@ -56,7 +66,5 @@ export class PicDateComponent {
       this.fecha.getDate(),
     ].join('-');
   }
-
-
 
 }
