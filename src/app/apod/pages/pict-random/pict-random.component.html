@@ -9,20 +9,20 @@
   
 
 <div class="intro disp-flex">
-  <div class="px-20">
-    <h2 class="title">Pictures of the day</h2>
-    <p class="">Every day one Picture, do yo like pictures of day ? Press reset button for more</p>
-  </div>
+  <app-text-intro [title] ="title" [longText]="longText"></app-text-intro>
 
   <div class="px-20">
-    <button
+    <button mat-raised-button color="accent">Reset <mat-icon mat-list-icon>
+      restart_alt
+    </mat-icon></button>
+    <!-- <button
       mat-fab color="warn" 
       aria-label="Example icon button with a home icon"
       (click)="resetPictures()">
-      <mat-icon mat-list-icon><span class="material-symbols-outlined restard">
+      <mat-icon mat-list-icon>
           restart_alt
-        </span></mat-icon>
-    </button>
+        </mat-icon>
+    </button> -->
   </div>
 </div>
 <mat-divider class="p-10"></mat-divider>
@@ -30,7 +30,7 @@
 
 <!-- images--------------------------- -->
 
-  <div class="container">
+  <section class="container wrapp-intro">
     <div class="grid">
       <div class="masonry-entry shadow rounded"  
             *ngFor="let picture of pictures"
@@ -43,7 +43,7 @@
         <h4>{{ picture.title }}</h4>
       </div>
     </div>
-  </div>
+  </section>
 
   
 </ng-template> 

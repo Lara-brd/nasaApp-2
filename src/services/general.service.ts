@@ -24,9 +24,18 @@ export class GeneralService {
     return this.lightTheme ? 'border-light-primary': 'border-dark-primary';
   }
 
-  setBgTransparent(){
-    return this.lightTheme ? 'bg-lightprimary-transp': 'bg-darkprimary-trans';
+  setColor(){
+    return this.lightTheme ? 'color-lightprimary-transp': 'color-darkprimary-transp';
   }
+
+  // .color-lightprimary-transp{
+  //   color: $light-primary;
+  
+  // }
+  
+  // .color-darkprimary-transp{
+  //   color:$dark-primary;
+  // }
 
 
 }

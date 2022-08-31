@@ -5,27 +5,12 @@ import { ApodService } from '../../services/apod.service';
 @Component({
   selector: 'app-pic-date',
   templateUrl: './pic-date.component.html',
-  styles: [`
-    .wrapp{
-      padding:50px;
-      max-width:1200px;
-    }
-    .text-day{
-      max-width:60%; 
-    }
-    .search{
-      margin-top:10px;
-      height:90px;
-  
-    }
-    .submit{
-      margin-left:20px;
-      padding-left:20px;
-      padding-right:20px;
-    }
-  `]
+  styleUrls: ['./pic-date.component.scss']
 })
 export class PicDateComponent {
+
+  title:string = 'Pictures by date';
+  longText:string ='Sinze 1995/jun/16 NASA  publishes every day a picture or video toguether width an explanation about astrology, using the datepicker you can find the picture of the day you want.'
 
   get picture(){
     return this._apodService.picture;
@@ -47,7 +32,7 @@ export class PicDateComponent {
 
 
 
-  getData(){
+  filterFrom(){
 
     this.fechaSended = true;
     const data = this.formatDate();

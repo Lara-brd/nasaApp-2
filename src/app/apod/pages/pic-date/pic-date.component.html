@@ -1,16 +1,15 @@
 
-
-
-<div class="wrapp center disp-flex just-space-bet">
+<div class="wrapp-intro center">
   <div class="text-day">
-    <h2 class="mat-title">Pictures by date</h2>
-    <p>Sinze 1995/jun/16 NASA  publishes every day a picture or video toguether width an explanation about astrology, using the datepicker you can find the picture of the day you want.</p>
+    <app-text-intro [title]="title" [longText]="longText"></app-text-intro>
 
   </div>
 
-  <div  class="search disp-flex rounded">
+  <span class="spacer"></span>
+
+  <div  class="search rounded">
     
-      <mat-form-field color="accent" appearance="fill">
+      <mat-form-field color="primary" appearance="fill">
         <mat-label>Choose a date</mat-label>
         <input  matInput [matDatepicker]="picker"
                 [(ngModel)]="fecha"
@@ -18,28 +17,13 @@
                 matInput 
                 [min]="minDate"
                 [max]="maxDate"
+                (dateChange)="filterFrom()" 
                 required>
         <mat-error *ngIf="!fecha">Use datepicker to choose a date please</mat-error>
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle style="background: inherit;" matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-      
       </mat-form-field>
-      
-      <button mat-raised-button 
-              color="primary"
-              (click)="getData()"
-              class="submit">
-              SUBMIT
-              </button>
-
-      
-      <!-- <button mat-button 
-              color="primary" 
-              aria-label="button submit"
-              (click)="getData()">
-        <mat-icon>send</mat-icon>
-      </button> -->
 
   </div>
   

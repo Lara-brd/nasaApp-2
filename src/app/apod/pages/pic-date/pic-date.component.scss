@@ -1,0 +1,41 @@
+
+
+
+.text-day{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+
+
+.mat-form-field {
+  width: 100%;
+}
+
+.search{
+  margin-bottom:50px;
+}
+
+
+// desktop
+
+@media (min-width: 700px){
+  
+  .wrapp-intro{
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-day{
+    margin-right:50px;
+    margin: 20px 50px 0 0px;
+
+
+  }
+
+  .search{
+    margin-bottom:0px;
+  }
+
+
+}

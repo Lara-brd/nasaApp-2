@@ -10,6 +10,9 @@ import { ApodService } from '../../services/apod.service';
 })
 export class PictRandomComponent implements OnInit {
 
+  title:string = 'Pictures of the day';
+  longText:string ='Every day one Picture, do yo like pictures of day ? Press reset button for more';
+
   get pictures(){
     return this._apodService.picturesRandom;
   }

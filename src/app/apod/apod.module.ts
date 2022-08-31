@@ -12,6 +12,7 @@ import { MaterialModule } from '../material/material.module';
 import { PicDayComponent } from './pages/pic-day/pic-day.component';
 import { BigImageComponent } from './components/big-image/big-image.component';
 import { FormsModule } from '@angular/forms';
+import { TextIntroComponent } from './components/text-intro/text-intro.component';
 
 
 
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     IframeComponent,
     PicDayComponent,
     BigImageComponent,
+    TextIntroComponent,
 
   ],
   imports: [
