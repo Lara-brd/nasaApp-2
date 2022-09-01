@@ -1,13 +1,25 @@
 
 
+
+
 button{
   padding:10px 20px;
+  width: 100%;
+  margin-bottom:50px;
+}
+
+@media (min-width: 700px){
+  button{
+    padding:10px 20px;
+    width: 20%;
+    margin-bottom:0;
+  }
+
 }
 
 .cont{
   height: 90vh;
 }
-
 
 
 .intro{

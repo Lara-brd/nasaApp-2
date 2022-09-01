@@ -8,24 +8,22 @@
 <ng-template #picturesOK>
   
 
-<div class="intro disp-flex">
-  <app-text-intro [title] ="title" [longText]="longText"></app-text-intro>
+<div class="wrapp-intro center">
 
-  <div class="px-20">
-    <button mat-raised-button color="accent">Reset <mat-icon mat-list-icon>
+  <div class="text-day">
+    <app-text-intro [title] ="title" [longText]="longText"></app-text-intro>
+  </div>
+
+  <span class="spacer"></span>
+
+    <button class="btn-reset" mat-raised-button color="accent" (click)="resetPictures()">Reset <mat-icon mat-list-icon>
       restart_alt
     </mat-icon></button>
-    <!-- <button
-      mat-fab color="warn" 
-      aria-label="Example icon button with a home icon"
-      (click)="resetPictures()">
-      <mat-icon mat-list-icon>
-          restart_alt
-        </mat-icon>
-    </button> -->
   </div>
-</div>
+
+
 <mat-divider class="p-10"></mat-divider>
+
 
 
 <!-- images--------------------------- -->

@@ -1,7 +1,8 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { OverlayContainer} from '@angular/cdk/overlay';
-import { ThemePalette } from '@angular/material/core';
 import { GeneralService } from 'src/services/general.service';
+
+
 
 interface linkSidebar {
   nameLink:String;
@@ -13,7 +14,7 @@ interface linkSidebar {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'nasaApp';
 
   dark:boolean = false;
@@ -22,6 +23,7 @@ export class AppComponent {
   mode:string='my-lighttheme';
 
   @HostBinding('class') componentCssClass:any;
+
 
   links:linkSidebar [] = [
     {
@@ -46,6 +48,9 @@ export class AppComponent {
 
   constructor(  public overlayContainer:OverlayContainer,
                 private _generalService:GeneralService){}
+
+  ngOnInit() {
+  }
 
 
   /////////////////////////////////////////////////////////
