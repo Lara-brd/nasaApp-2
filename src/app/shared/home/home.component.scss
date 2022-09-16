@@ -1,88 +1,67 @@
 
 
-.colorChange{
-  background-color: pink;
-}
-
 header{
   background-color: black;
-  p{
+}
+
+.wrapp-header{
+  min-height: 92vh;
+  background-position:right;
+  background-image: url(https://apod.nasa.gov/apod/image/2201/JupiterOpal_HubbleMasztalerz_960.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.content-header{
+  padding:100px 50px 50px 50px;
+
+
+
+  h2{
     color:white;
+    font-family: 'Electrolize';
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  p{
+    color:rgba(255, 255, 255, 0.718);
+    margin-top:50px;
   }
 
   button{
-    margin-top: 15px;
+    border: 1px solid rgba(81, 81, 81, 0.561);
+
   }
 
-  img{
-    width: 100%;
+}
+
+
+
+
+@media (min-width:900px){
+  .content-header{
+    width:40%;
+  }
+}
+
+
+
+@media (max-width:900px){
+  .wrapp-header{
+    background-position:bottom;
+  }
+  .content-header{
+    padding: 50px 20px 20px 20px;
   }
 
-  .content2{
-    p{
-      color:white
-    }
+  .wrapp-header{
+    width:100%;
+    height: 1000px;
+    background-image: url(https://apod.nasa.gov/apod/image/2201/JupiterOpal_HubbleMasztalerz_960.jpg);
+    background-position:bottom;
+
   }
 }
 
-
-.content2,
-.header-text,
-.cards{
-  padding:80px 20px;
-}
-
-
-
-/////////////////////////////////////////////
-
-h2{
-  font-family: 'Electrolize', sans-serif;
-  font-size: 2.5rem;
-  line-height: 1.5;
-  color:white;
-}
-
-
-/////////////////////////////////////////////
-
-@media (min-width: 1200px) {
-  .container{
-    display: flex;
-  }
-  .content2{
-    text-align: center;
-    max-width: 1200px;
-  }
-
-.content2,
-.header-text,
-.cards{
-  padding:150px 50px;
-}
-
-.header-text,
-.header-image{
-  width: 50%;
-}
-
-.header-text{
-  max-width: 700px;
-  margin-left: auto;
-  animation-name: text;
-  opacity: 1;
-  animation-duration: 2s;
-  
-}
-
-}
-
-@keyframes text{
-  0% { transform: translateX(-100px);
-        opacity: 0.5;}
-  100% { transform: translateX(0);
-          opacity: 1;}
-  
-}
 
 

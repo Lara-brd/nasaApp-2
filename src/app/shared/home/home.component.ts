@@ -1,6 +1,6 @@
 import { Component, HostListener} from '@angular/core';
 import { Router } from '@angular/router';
-import { GeneralService } from 'src/services/general.service';
+
 
 interface cardInfo{
   title:string;
@@ -22,43 +22,47 @@ export class HomeComponent {
 
 
 
-  cardsInfo:cardInfo [] = [
-    {
-    title:"Pictures of the day",
-    subtitle:' NASA pictures',
-    intro:'Every day a new picture.',
-    longText:'Since xxxxx NASA publish a picture every day width an interesting explanation about it, here you can see these pictures updated, choose a date or consult a mount of the at the same time',
-    btnSend: 'See Picture of the Day ... ',
-    link:'./apod/day',
-    active:true
-    },
-    {
-    title:"Library",
-    subtitle:' NASA library',
-    intro:'A library width pictures and videos',
-    longText:'Next update, library NASA',
-    link:'',
-    btnSend: ' '
+//   cardsInfo:cardInfo [] = [
+//     {
+//     title:"Pictures of the day",
+//     subtitle:' NASA pictures',
+//     intro:'Every day a new picture.',
+//     longText:'Since xxxxx NASA publish a picture every day width an interesting explanation about it, here you can see these pictures updated, choose a date or consult a mount of the at the same time',
+//     btnSend: 'See Picture of the Day ... ',
+//     link:'./apod/day',
+//     active:true
+//     },
+//     {
+//     title:"Library",
+//     subtitle:' NASA library',
+//     intro:'A library width pictures and videos',
+//     longText:'Next update, library NASA',
+//     link:'',
+//     btnSend: ' '
 
-    }
-]
+//     }
+// ]
 
 
 
 //////////////////////////////////////////////////////
 
-  constructor(  private _generalService:GeneralService,
-                private _router:Router) { }
+  constructor(private _router:Router) { }
 
  ///// ///////////////////////////////////////////////
 
 
-  getBorder(){
-    return this._generalService.setBorder();
-  }
+  // getBorder(){
+  //   return this._generalService.setBorder();
+  // }
 
-  goTo(link:string){
-    this._router.navigate([`${link}`])
+  // goTo(link:string){
+  //   this._router.navigate([`${link}`])
+  // }
+
+  goToToday(){
+    this._router.navigate(['./apod/day']);
+
   }
 
 }
