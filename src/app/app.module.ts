@@ -11,11 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import { OverlayModule } from '@angular/cdk/overlay';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

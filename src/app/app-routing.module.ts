@@ -11,6 +11,10 @@ const routes:Routes = [
     loadChildren:()=>import('./apod/apod.module').then(m=>m.ApodModule)
   },
   {
+    path:'library',
+    loadChildren:()=> import ('./library/library.module').then(m=>m.LibraryModule)
+  },
+  {
     path:'home',
     component:HomeComponent
   },
