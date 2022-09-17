@@ -1,6 +1,6 @@
 export interface Picture {
   copyright:       string;
-  date:            Date;
+  date?:            Date;
   explanation:     string;
   hdurl:           string;
   media_type:      string;

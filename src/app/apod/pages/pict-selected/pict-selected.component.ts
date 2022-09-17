@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { ApodService } from '../../services/apod.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { ApodService } from '../../services/apod.service';
   styles: [
   ]
 })
-export class PictSelectedComponent implements OnInit {
+export class PictSelectedComponent {
 
   get picture(){
     return this._apodService;
@@ -18,10 +17,6 @@ export class PictSelectedComponent implements OnInit {
 
   isVideo:boolean = false;
 
-  constructor(  private _apodService:ApodService,
-                private _router:Router) { }
-
-  ngOnInit(): void {
-  }
+  constructor(  private _apodService:ApodService) { }
 
 }

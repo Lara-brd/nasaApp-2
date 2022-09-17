@@ -62,7 +62,10 @@ export class HomeComponent {
 
   goToToday(){
     this._router.navigate(['./apod/day']);
+  }
 
+  goToJupiter(){
+    this._router.navigate(['./apod/jupiter']);
   }
 
 }

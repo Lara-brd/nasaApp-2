@@ -53,8 +53,19 @@ setPictureByDate(fecha:string){
       this.picture = info[0];
       this.videoUrl = this.picture.url;
     })
+    this.picture = {
+      copyright: '',
+      explanation:'',
+      hdurl: '',
+      media_type:'',
+      service_version: '',
+      title:'',
+      url:''
 
+    }
 }
 
 
 }
+
+

@@ -13,6 +13,7 @@ import { PicDayComponent } from './pages/pic-day/pic-day.component';
 import { BigImageComponent } from './components/big-image/big-image.component';
 import { FormsModule } from '@angular/forms';
 import { TextIntroComponent } from './components/text-intro/text-intro.component';
+import { JupiterComponent } from './pages/jupiter/jupiter.component';
 
 
 
@@ -26,6 +27,7 @@ import { TextIntroComponent } from './components/text-intro/text-intro.component
     PicDayComponent,
     BigImageComponent,
     TextIntroComponent,
+    JupiterComponent,
 
   ],
   imports: [

@@ -6,6 +6,7 @@ import { PictRandomComponent } from './pages/pict-random/pict-random.component';
 import { PictSelectedComponent } from './pages/pict-selected/pict-selected.component';
 import { PicDateComponent } from './pages/pic-date/pic-date.component';
 import { PicDayComponent } from './pages/pic-day/pic-day.component';
+import { JupiterComponent } from './pages/jupiter/jupiter.component';
 
 const routes:Routes = [
   {
@@ -15,7 +16,8 @@ const routes:Routes = [
       { path:'day', component:PicDayComponent},
       { path:'random', component:PictRandomComponent},
       { path:'selected', component:PictSelectedComponent},
-      {path:'date', component:PicDateComponent},
+      { path:'date', component:PicDateComponent},
+      { path:'jupiter', component:JupiterComponent},
       { path:'**', component:HomeApodComponent}
     ]
   }
