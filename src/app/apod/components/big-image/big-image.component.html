@@ -8,7 +8,7 @@
 
 <ng-template #pictureOk>
 
-  <div  class="card disp-flex just-center dir-column "
+  <div  class="card disp-flex just-center dir-column"
         [class]="(picture.media_type == 'video')? 'max-w-960': 'max-w-700'">
     <!--  -->
     
@@ -23,7 +23,6 @@
 
     <ng-template #image>
 
-      image
       <img [src]="picture.url" 
             class="shadow rounded" 
             onerror="this.src='../../../../assets/images/placeholder.jpg'"
