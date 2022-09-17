@@ -80,4 +80,8 @@ export class AppComponent implements OnInit {
     return this._generalService.setBg()
   }
 
+  getClassLogo(){
+    return this._generalService.setBgLogo();
+  }
+
 }

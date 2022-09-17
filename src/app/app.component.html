@@ -32,13 +32,19 @@
 
   
   <!-- content -->
-  <mat-toolbar class="navBar">
+  <mat-toolbar color="primary" class="navBar">
     <button mat-icon-button 
             class="example-icon" 
             aria-label="Example icon-button with menu icon"
             (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
+    <img  class="logo rounded" 
+          src="../assets/images/logoBrd.png" 
+          width="50px" 
+          alt="logoBRD"
+          [class]="getClassLogo()"
+          routerLink="/home">
     <span class="go-home" routerLink="/home">BRD Universe</span>
     <span class="spacer"></span>
     <!-- dark mode -->
@@ -64,6 +70,7 @@
   <div class="container">
     <router-outlet></router-outlet>
   </div>
+
   
   <router-outlet></router-outlet>
 

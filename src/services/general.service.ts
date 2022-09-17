@@ -28,6 +28,9 @@ export class GeneralService {
     return this.lightTheme ? 'color-lightprimary-transp': 'color-darkprimary-transp';
   }
 
+  setBgLogo(){
+    return  this.lightTheme ? 'bg-orange': 'bg-blue';
+  }
   // .color-lightprimary-transp{
   //   color: $light-primary;
   
